@@ -11,6 +11,14 @@ extern "C" {
 
 #include "usart.h"
 
+typedef struct
+{
+    UART_HandleTypeDef huart;
+} RS485;
+
+    void RS485_init()
+HAL_StatusTypeDef RS485_Send(void* obj, uint8_t* buffer, uint16_t length);
+HAL_StatusTypeDef RS485_Receive(void* obj, uint8_t* buffer, uint16_t length);
 
 
 #ifdef __cplusplus

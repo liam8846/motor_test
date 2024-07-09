@@ -37,7 +37,9 @@ message("Build type: " ${CMAKE_BUILD_TYPE})
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
         Core/Inc/rs485.h
-        Core/Src/rs458.c)
+        Core/Src/rs458.c
+        Core/motor_interface.h
+        Core/Src/motor_interface.c)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
